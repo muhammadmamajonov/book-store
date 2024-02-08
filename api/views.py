@@ -1,6 +1,3 @@
-from re import M
-from string import punctuation
-from unicodedata import category
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response

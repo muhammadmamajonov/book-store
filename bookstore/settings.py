@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_crontab',
     'api'
 ]
 
@@ -83,6 +84,9 @@ DATABASES = {
     }
 }
 
+CRONJOBS = [
+    ('* * * * *', 'api.cron.send_report'),
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
